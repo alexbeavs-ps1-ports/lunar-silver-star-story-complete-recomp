@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Lunar - Silver Star Story Complete"
+id = "SLUS-00628"
+players = 1
+exe = "disc/SLUS_006.28"
+disc = "disc/Lunar - Silver Star Story Complete (USA) (Disc 1).cue"
+discs = ["disc/Lunar - Silver Star Story Complete (USA) (Disc 1).cue", "disc/Lunar - Silver Star Story Complete (USA) (Disc 2).cue"]
+disc_serials = ["SLUS-00628", "SLUS-00899"]
+load_address = "0x80100000"
+entry_pc = "0x801001EC"
+text_size = "0x00055000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Lunar - Silver Star Story Complete (USA) (Disc 1) (Track 1).bin"
+cue_name = "Lunar - Silver Star Story Complete (USA) (Disc 1).cue"
+boot_exe = "SLUS_006.28"
+known_sizes = [580054944]
+known_md5 = [
+  "ff8c7002690e8ea8f109ac04626937ed",
+]
+known_sha1 = [
+  "c9e6b1f4ad56711b9af92ead01536a794f00fc47",
+]
+known_crc32 = [
+  "6c322289",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Lunar - Silver Star Story Complete Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 3
+required_disc_fp = "39875ef5649a72db475fba969c1dd70d4f490a7b9f795b63ca9223dfb8283abb"

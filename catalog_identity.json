@@ -1,0 +1,73 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Lunar - Silver Star Story Complete",
+    "id": "SLUS-00628",
+    "boot_exe": "SLUS_006.28"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Lunar - Silver Star Story Complete (USA) (Disc 1).cue",
+    "bin_name": "Lunar - Silver Star Story Complete (USA) (Disc 1) (Track 1).bin",
+    "track_counts": [
+      3,
+      3
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 580054944,
+      "md5": "ff8c7002690e8ea8f109ac04626937ed",
+      "sha1": "c9e6b1f4ad56711b9af92ead01536a794f00fc47",
+      "crc32": "6c322289"
+    },
+    "disc_fp": "39875ef5649a72db475fba969c1dd70d4f490a7b9f795b63ca9223dfb8283abb",
+    "discs": [
+      {
+        "index": 1,
+        "cue_name": "Lunar - Silver Star Story Complete (USA) (Disc 1).cue",
+        "bin_name": "Lunar - Silver Star Story Complete (USA) (Disc 1) (Track 1).bin",
+        "size": 580054944,
+        "md5": "ff8c7002690e8ea8f109ac04626937ed",
+        "sha1": "c9e6b1f4ad56711b9af92ead01536a794f00fc47",
+        "crc32": "6c322289",
+        "track_count": 3,
+        "serial": "SLUS-00628",
+        "disc_fp": "39875ef5649a72db475fba969c1dd70d4f490a7b9f795b63ca9223dfb8283abb"
+      },
+      {
+        "index": 2,
+        "cue_name": "Lunar - Silver Star Story Complete (USA) (Disc 2).cue",
+        "bin_name": "Lunar - Silver Star Story Complete (USA) (Disc 2) (Track 1).bin",
+        "size": 693402528,
+        "md5": "38d241e69b55b72c43c8e53e4d070765",
+        "sha1": "96ec68903dcab2750547d57c6d78846b77b9b8a8",
+        "crc32": "ab613fca",
+        "track_count": 3,
+        "serial": "SLUS-00899",
+        "disc_fp": "b15bfbf8f236a85bb1f7db289aeb01302599f6badc4fd21a0227fdf947976ba4"
+      }
+    ]
+  },
+  "exe": {
+    "load_address": "0x80100000",
+    "entry_pc": "0x801001EC",
+    "text_size": "0x00055000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 6,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

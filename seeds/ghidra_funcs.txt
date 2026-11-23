@@ -1,0 +1,9 @@
+# Auto-scanned JAL targets (+ entry) from SLUS_006.28
+# entry=0x801001ec load=0x80100000 text_size=0x55000
+# First-pass only — add overlay / runtime discoveries as you decomp.
+0x80100000
+0x80100160
+0x801001EC
+0x80100294
+0x8010036C
+0x8010E4F4

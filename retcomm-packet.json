@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "id": "lunar-silver-star-story-complete-psx",
+  "name": "Lunar - Silver Star Story Complete",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "lunar-silver-star-story-complete-recomp",
+  "rom_identity": {
+    "crc32": [
+      "6c322289",
+      "ab613fca"
+    ],
+    "md5": [
+      "ff8c7002690e8ea8f109ac04626937ed",
+      "38d241e69b55b72c43c8e53e4d070765"
+    ],
+    "sha1": [
+      "c9e6b1f4ad56711b9af92ead01536a794f00fc47",
+      "96ec68903dcab2750547d57c6d78846b77b9b8a8"
+    ],
+    "disc_serials": [
+      "SLUS-00628",
+      "SLUS-00899"
+    ],
+    "sizes": [
+      580054944,
+      693402528
+    ],
+    "filenames": [
+      "Lunar - Silver Star Story Complete (USA) (Disc 1).cue",
+      "Lunar - Silver Star Story Complete (USA) (Disc 1) (Track 1).bin",
+      "Lunar - Silver Star Story Complete (USA) (Disc 2).cue",
+      "Lunar - Silver Star Story Complete (USA) (Disc 2) (Track 1).bin"
+    ],
+    "track_counts": [
+      3,
+      3
+    ],
+    "disc_fps": [
+      "39875ef5649a72db475fba969c1dd70d4f490a7b9f795b63ca9223dfb8283abb",
+      "b15bfbf8f236a85bb1f7db289aeb01302599f6badc4fd21a0227fdf947976ba4"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/lunar-silver-star-story-complete-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "lunar-silver-star-story-complete-*-windows-x64.zip",
+      "linux-x64": "lunar-silver-star-story-complete-*-linux-x64.zip",
+      "macos-arm64": "lunar-silver-star-story-complete-*-macos-arm64.zip",
+      "macos-x64": "lunar-silver-star-story-complete-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "lunar_silver_star_story_complete.exe",
+    "linux": "lunar_silver_star_story_complete",
+    "macos": "lunar_silver_star_story_complete"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/lunar-silver-star-story-complete-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
